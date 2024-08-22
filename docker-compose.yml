@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  ears:
+    image: ${DOCKER_REGISTRY-}ears
+    build:
+      context: .
+      dockerfile: EARS/Dockerfile
+
+  questionprocessor:
+    image: ${DOCKER_REGISTRY-}questionprocessor
+    build:
+      context: .
+      dockerfile: QuestionProcessor/Dockerfile
+
